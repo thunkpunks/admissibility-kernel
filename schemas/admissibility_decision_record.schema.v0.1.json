@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neverthought.org/schemas/admissibility_decision_record.v0.1.json",
+  "title": "AdmissibilityDecisionRecord",
+  "version": "0.1",
+  "classification": "public-inspection-artifact",
+  "type": "object",
+  "required": [
+    "record_id",
+    "generated_at",
+    "proposal_id",
+    "state_ref",
+    "projection_ref",
+    "decision",
+    "constraint_results",
+    "transformability_status",
+    "audit_hash"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "proposal_id": {
+      "type": "string"
+    },
+    "state_ref": {
+      "type": "string"
+    },
+    "projection_ref": {
+      "type": "string"
+    },
+    "observed_state_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "EXECUTE",
+        "TRANSFORM",
+        "DEFER",
+        "REJECT"
+      ]
+    },
+    "constraint_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "constraint_id",
+          "status"
+        ],
+        "properties": {
+          "constraint_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "UNKNOWN_CONSERVATIVE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "residue_summary": {
+      "type": "object",
+      "properties": {
+        "residue_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dominant_residue_class": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "optionality_effect": {
+      "type": "object",
+      "properties": {
+        "direction": {
+          "enum": [
+            "PRESERVED",
+            "EXPANDED",
+            "CONTRACTED",
+            "UNKNOWN"
+          ]
+        },
+        "public_proxy_only": {
+          "type": "boolean"
+        }
+      }
+    },
+    "transformability_status": {
+      "enum": [
+        "PRESERVED",
+        "CONTRACTED_WITHIN_BOUNDS",
+        "TRANSFORM_REQUIRED",
+        "DEFER_REQUIRED",
+        "VIOLATED",
+        "UNKNOWN_CONSERVATIVE"
+      ]
+    },
+    "review_prompts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_hash": {
+      "type": "string"
+    }
+  }
+}

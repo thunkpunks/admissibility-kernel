@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neverthought.org/schemas/transformability_preservation_record.v0.1.json",
+  "title": "TransformabilityPreservationRecord",
+  "version": "0.1",
+  "classification": "public-inspection-artifact",
+  "type": "object",
+  "required": [
+    "record_id",
+    "generated_at",
+    "state_ref",
+    "proposal_id",
+    "status",
+    "branch_loss_accounting",
+    "audit_hash"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "state_ref": {
+      "type": "string"
+    },
+    "proposal_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PRESERVED",
+        "CONTRACTED_WITHIN_BOUNDS",
+        "TRANSFORM_REQUIRED",
+        "DEFER_REQUIRED",
+        "VIOLATED"
+      ]
+    },
+    "future_transformability_effect": {
+      "type": "object",
+      "properties": {
+        "direction": {
+          "enum": [
+            "EXPANDED",
+            "PRESERVED",
+            "CONTRACTED",
+            "DESTROYED",
+            "UNKNOWN"
+          ]
+        },
+        "public_proxy_only": {
+          "type": "boolean"
+        }
+      }
+    },
+    "branch_loss_accounting": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "lost_branch_id",
+          "lost_branch_type",
+          "recoverability_status"
+        ],
+        "properties": {
+          "lost_branch_id": {
+            "type": "string"
+          },
+          "lost_branch_type": {
+            "type": "string"
+          },
+          "reason_for_loss": {
+            "type": "string"
+          },
+          "authority_basis": {
+            "type": "string"
+          },
+          "residue_created": {
+            "type": "boolean"
+          },
+          "recoverability_status": {
+            "enum": [
+              "RECOVERABLE",
+              "PARTIALLY_RECOVERABLE",
+              "NOT_RECOVERABLE",
+              "UNKNOWN"
+            ]
+          },
+          "appeal_or_review_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "review_prompts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_hash": {
+      "type": "string"
+    }
+  }
+}

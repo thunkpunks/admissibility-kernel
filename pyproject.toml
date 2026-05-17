@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neverthought-admissibility-kernel"
+version = "0.1.0"
+description = "Public learning kernel for context-to-consequence pre-commitment admissibility governance"
+readme = "README.md"
+license = { file = "LICENSE.md" }
+requires-python = ">=3.11"
+authors = [
+    { name = "Mebs Loghdey", email = "mebsloghdey@gmail.com" },
+]
+keywords = [
+    "admissibility",
+    "pre-commitment-governance",
+    "context-to-consequence",
+    "human-before-the-loop",
+    "consequence-aware-ai",
+    "recursive-viability",
+    "transformability-preservation",
+    "epistemic-integrity",
+    "decision-records",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+"Homepage" = "https://neverthought.com"
+"Repository" = "https://github.com/thunkpunks/admissibility-kernel"
+"Bench" = "https://bench.neverthought.org"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

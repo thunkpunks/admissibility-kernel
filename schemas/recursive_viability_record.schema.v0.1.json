@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neverthought.org/schemas/recursive_viability_record.v0.1.json",
+  "title": "RecursiveViabilityRecord",
+  "version": "0.1",
+  "classification": "public-inspection-artifact",
+  "type": "object",
+  "required": [
+    "record_id",
+    "generated_at",
+    "state_ref",
+    "horizon",
+    "viability_status",
+    "local_decisions",
+    "audit_hash"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "state_ref": {
+      "type": "string"
+    },
+    "horizon": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sequence_family_ref": {
+      "type": "string"
+    },
+    "local_decisions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "EXECUTE",
+          "TRANSFORM",
+          "DEFER",
+          "REJECT"
+        ]
+      }
+    },
+    "residue_trajectory": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "optionality_trajectory": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "topology_temperature_trajectory": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "branch_isolation_status": {
+      "enum": [
+        "PRESERVED",
+        "DEGRADED",
+        "VIOLATED",
+        "UNKNOWN"
+      ]
+    },
+    "authority_concentration_status": {
+      "enum": [
+        "DISTRIBUTED",
+        "CONCENTRATING",
+        "CONCENTRATED",
+        "UNKNOWN"
+      ]
+    },
+    "viability_status": {
+      "enum": [
+        "VIABLE",
+        "CONDITIONALLY_VIABLE",
+        "DEFER_REQUIRED",
+        "NON_VIABLE"
+      ]
+    },
+    "failure_mode_if_any": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        null,
+        "LOCAL_PASS_GLOBAL_FAIL",
+        "RESIDUE_COMPACTION",
+        "AUTHORITY_COOLING",
+        "BRANCH_CONTAMINATION",
+        "OPTIONALITY_EXHAUSTION",
+        "DEFERRED_COLLAPSE_MASKING",
+        "TRANSFORM_CHURN"
+      ]
+    },
+    "recommended_gate_action": {
+      "enum": [
+        "EXECUTE",
+        "TRANSFORM",
+        "DEFER",
+        "REJECT"
+      ]
+    },
+    "audit_hash": {
+      "type": "string"
+    }
+  }
+}
