@@ -1,3 +1,13 @@
+Status: public learning kernel.
+
+For the canonical reference runtime, see:
+thunkpunks-constitutional_runtime_substrate
+
+For observability/evidence tooling, see:
+Tracebench
+
+This repository is an educational inspection surface, not a production governance engine, certification system, or deployment runtime.
+
 # Admissibility Kernel
 
 **A public learning kernel for context-to-consequence, pre-commitment admissibility governance.**
