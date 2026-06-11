@@ -95,15 +95,20 @@ This is the public spine of the repo, the website, and the self-service build-an
 ## Position in the wider review path
 This repository is one component in a wider public review path.
 
+## Position in the wider review path
+
+This repository is one component in a wider public review path.
+
 A reviewer may encounter the wider sequence as:
 
-Observation
-→ Observation Coding
-→ TraceClaim
-→ Claim Boundary Review
-→ Projection Graduation Ledger
-→ Admissibility Kernel
-→ Constitutional Runtime Substrate
+```text
+[Public Repo]     Tracebench
+[Public Repo]     CEC Observatory
+[Public Artifact] TraceClaim
+[Public Artifact] Claim Boundary Review
+[Public Artifact] Projection Graduation Ledger
+[Public Repo]     Admissibility Kernel
+[Public Repo]     Constitutional Runtime Substrate
 
 Each stage serves a different purpose.
 
