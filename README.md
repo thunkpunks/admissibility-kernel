@@ -1,4 +1,4 @@
-Status: public learning kernel.
+﻿Status: public learning kernel.
 
 For the canonical reference runtime, see:
 thunkpunks-constitutional_runtime_substrate
@@ -16,7 +16,7 @@ This repository is an educational inspection surface, not a production governanc
 
 This repository introduces a small, inspectable kernel for asking one question before a system crosses a consequential boundary:
 
-> **Can this proposed commitment proceed without destroying the system’s future capacity for legitimate transformation?**
+> **Can this proposed commitment proceed without destroying the systemâ€™s future capacity for legitimate transformation?**
 
 In its shortest public form:
 
@@ -25,10 +25,10 @@ In its shortest public form:
 Most AI systems move from context to output. More consequential systems move from context to action. Neverthought inserts a missing step:
 
 ```text
-Context → Consequence → Admissibility → Commitment
+Context â†’ Consequence â†’ Admissibility â†’ Commitment
 ```
 
-The kernel does not optimise for speed, confidence, compliance theatre, or a more impressive-looking dashboard for someone’s quarterly governance ritual. It evaluates whether a proposed transition remains admissible under pressure.
+The kernel does not optimise for speed, confidence, compliance theatre, or a more impressive-looking dashboard for someoneâ€™s quarterly governance ritual. It evaluates whether a proposed transition remains admissible under pressure.
 
 It returns one of four outcomes:
 
@@ -60,7 +60,7 @@ The admissibility kernel provides a public, inspectable grammar for reasoning ab
 
 ## Human before the loop
 
-This repository is part of Neverthought’s **human-before-the-loop** doctrine.
+This repository is part of Neverthoughtâ€™s **human-before-the-loop** doctrine.
 
 Human-before-the-loop is not a nicer phrase for human-in-the-loop. Human-in-the-loop usually means a person approves, corrects, or overrides a process that is already moving. Human-before-the-loop means judgement enters before automation begins narrowing the field.
 
@@ -103,7 +103,7 @@ This is the public spine of the repo, the website, and the self-service build-an
    Why was this outcome reached, and what remains reviewable?
 ```
 
-This repo implements a public-safe, executable learning surface for steps 3–7. The website and bench explain, simulate, and teach the full journey.
+This repo implements a public-safe, executable learning surface for steps 3â€“7. The website and bench explain, simulate, and teach the full journey.
 
 ---
 
@@ -119,7 +119,7 @@ If you are new to the repo, follow this path:
 6. Read [`docs/CONTEXT_TO_CONSEQUENCE.md`](docs/CONTEXT_TO_CONSEQUENCE.md).
 7. Read [`docs/HUMAN_BEFORE_THE_LOOP.md`](docs/HUMAN_BEFORE_THE_LOOP.md).
 
-The goal is not to make you worship a tiny Python package. Steady yourself. The goal is to learn the professional grammar of consequence-aware commitment before action.
+The goal is not to make you overstate a small Python package. review carefully. The goal is to learn the professional grammar of consequence-aware commitment before action.
 
 ---
 
@@ -129,9 +129,9 @@ The goal is not to make you worship a tiny Python package. Steady yourself. The 
 
 It evaluates proposed actions **before** execution and keeps three concerns separate:
 
-1. **Local admissibility** — does this proposed action satisfy invariant conditions at the point of evaluation?
-2. **Recursive viability** — can a sequence of locally admissible actions remain governable over a horizon?
-3. **Transformability preservation** — does the action preserve enough recoverable future transformation, or does it foreclose futures that cannot be recovered?
+1. **Local admissibility** â€” does this proposed action satisfy invariant conditions at the point of evaluation?
+2. **Recursive viability** â€” can a sequence of locally admissible actions remain governable over a horizon?
+3. **Transformability preservation** â€” does the action preserve enough recoverable future transformation, or does it foreclose futures that cannot be recovered?
 
 The public code uses illustrative thresholds and public proxy observables. It is designed to make the architecture legible without exposing calibrated runtime mechanics.
 
@@ -158,20 +158,20 @@ See [`CLAIM_BOUNDARY.md`](CLAIM_BOUNDARY.md) and [`docs/PUBLIC_CLAIM_CEILING.md`
 Every public artefact in this repository follows this standard:
 
 ```text
-claim → evidence object → inspection path → claim limit
+claim â†’ evidence object â†’ inspection path â†’ claim limit
 ```
 
-A local proof object proves only the local claim attached to it. A passing example does not certify a real system, authorise a deployment, or bless an institution’s governance posture with fairy dust in YAML form.
+A local proof object proves only the local claim attached to it. A passing example does not certify a real system, authorise a deployment, or bless an institutionâ€™s governance posture with unsupported configuration claims.
 
 ---
 
 ## Three named assets
 
-### 1. Pre-Commitment Admissibility Gate — PCAG
+### 1. Pre-Commitment Admissibility Gate â€” PCAG
 
 Evaluates a proposed transition before execution using conservative projection.
 
-The gate acts on **Ŝ_{t+1|p}**, the conservatively projected next state under the proposal. It does not evaluate only the current state, and it does not wait until after execution.
+The gate acts on **Åœ_{t+1|p}**, the conservatively projected next state under the proposal. It does not evaluate only the current state, and it does not wait until after execution.
 
 Outputs:
 
@@ -179,7 +179,7 @@ Outputs:
 EXECUTE | TRANSFORM | DEFER | REJECT
 ```
 
-### 2. Recursive Viability Kernel — RVK
+### 2. Recursive Viability Kernel â€” RVK
 
 Evaluates whether a sequence of locally admissible transitions remains governable under recursive composition.
 
@@ -191,7 +191,7 @@ Outputs:
 VIABLE | CONDITIONALLY_VIABLE | DEFER_REQUIRED | NON_VIABLE
 ```
 
-### 3. Transformability Preservation Invariant — TPI
+### 3. Transformability Preservation Invariant â€” TPI
 
 Evaluates whether a transition preserves the recoverable set of legitimate future transformations above a viability floor.
 
@@ -207,8 +207,8 @@ PRESERVED | CONTRACTED_WITHIN_BOUNDS | TRANSFORM_REQUIRED | DEFER_REQUIRED | VIO
 
 | Symbol | Name | Public role |
 |---|---|---|
-| Ωᵣ | Recoverable optionality | Future manoeuvre space; must stay above viability floor |
-| Θ | Topology temperature | Renegotiability proxy; cold topology blocks irreversible mutation |
+| Î©áµ£ | Recoverable optionality | Future manoeuvre space; must stay above viability floor |
+| Î˜ | Topology temperature | Renegotiability proxy; cold topology blocks irreversible mutation |
 | B_iso | Branch isolation integrity | Whether counterfactual futures remain inspectable |
 | R | Residue | Accumulated unresolved pressure from DEFER and HOLD-like outcomes |
 
@@ -222,11 +222,11 @@ The gate enforces strict separation between:
 
 ```text
 S_t          Current state before the proposed transition
-Ŝ_{t+1|p}   Projected state after conservative proposal projection
+Åœ_{t+1|p}   Projected state after conservative proposal projection
 S_{t+1|o}   Observed state after execution, if execution occurs
 ```
 
-Admissibility is evaluated on **Ŝ_{t+1|p}**.
+Admissibility is evaluated on **Åœ_{t+1|p}**.
 
 Evaluating only on `S_t` is current-state auditing. Evaluating only on `S_{t+1|o}` is post-hoc forensics. Neither is pre-commitment governance.
 
@@ -242,7 +242,7 @@ DEFER(S_t, u_t) = S_t + DeferRecord(unresolved_conditions, required_evidence, re
 
 No commitment boundary is crossed. The state does not execute the proposed transition. The DeferRecord states why commitment was withheld and what would resolve it.
 
-**TRANSFORM** is a constrained reframing operator. A transformed proposal is valid only if its projected Ωᵣ is at least as high as the original proposal’s projected Ωᵣ. A transform that reduces recoverable optionality is not a legitimate reframing.
+**TRANSFORM** is a constrained reframing operator. A transformed proposal is valid only if its projected Î©áµ£ is at least as high as the original proposalâ€™s projected Î©áµ£. A transform that reduces recoverable optionality is not a legitimate reframing.
 
 Refusal, deferral, and transformation are not automation failures. They are governance outputs.
 
@@ -260,7 +260,7 @@ Reference-surface validation asks:
 
 This repository asks a different question:
 
-> Can this proposed commitment proceed without destroying the system’s future capacity for legitimate transformation?
+> Can this proposed commitment proceed without destroying the systemâ€™s future capacity for legitimate transformation?
 
 The kernel does not merely check whether an action is authorised relative to a rule. It evaluates whether the proposed transition preserves recoverable optionality, recursive viability, and transformability under pressure.
 
@@ -316,7 +316,7 @@ Commercial deployments, calibrated runtime components, proof-generation mechanic
 
 ## Search identity
 
-**Mebs Loghdey / Neverthought — context-to-consequence pre-commitment admissibility governance.**
+**Mebs Loghdey / Neverthought â€” context-to-consequence pre-commitment admissibility governance.**
 
 Core terms:
 
@@ -340,7 +340,7 @@ Core terms:
 
 Primary site:
 
-> **https://neverthought.com**
+> **https://neverthought.org**
 
 Bench / self-service learning surface:
 
@@ -366,3 +366,5 @@ Website bridge:
 **Email:** mebsloghdey@gmail.com  
 **Organisation:** Neverthought  
 **Framework:** Epistemic Integrity Governance / Semantic Ruliad  
+
+
