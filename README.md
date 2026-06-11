@@ -109,7 +109,7 @@ If you are new to the repo, follow this path:
 6. Read [`docs/CONTEXT_TO_CONSEQUENCE.md`](docs/CONTEXT_TO_CONSEQUENCE.md).
 7. Read [`docs/HUMAN_BEFORE_THE_LOOP.md`](docs/HUMAN_BEFORE_THE_LOOP.md).
 
-The goal is not to make you worship a tiny Python package. Steady yourself. The goal is to learn the professional grammar of consequence-aware commitment before action.
+The goal is to learn the professional grammar of consequence-aware commitment before action.
 
 ---
 
@@ -193,7 +193,7 @@ PRESERVED | CONTRACTED_WITHIN_BOUNDS | TRANSFORM_REQUIRED | DEFER_REQUIRED | VIO
 
 ---
 
-## Core observables
+## Public proxy observables
 
 | Symbol | Name | Public role |
 |---|---|---|
@@ -355,4 +355,4 @@ Website bridge:
 **Author:** Mebs Loghdey  
 **Email:** mebsloghdey@gmail.com  
 **Organisation:** Neverthought  
-**Framework:** Epistemic Integrity Governance / Semantic Ruliad  
+**Framework:** Epistemic Integrity Governance
