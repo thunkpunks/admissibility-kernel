@@ -92,6 +92,34 @@ This is the public spine of the repo, the website, and the self-service build-an
 7. Inspection record
    Why was this outcome reached, and what remains reviewable?
 ```
+## Position in the wider review path
+This repository is one component in a wider public review path.
+
+A reviewer may encounter the wider sequence as:
+
+Observation
+→ Observation Coding
+→ TraceClaim
+→ Claim Boundary Review
+→ Projection Graduation Ledger
+→ Admissibility Kernel
+→ Constitutional Runtime Substrate
+
+Each stage serves a different purpose.
+
+Observation Coding concerns what was observed.
+
+TraceClaim concerns what may be claimed from those observations.
+
+Claim Boundary Review concerns whether a claim exceeds available evidence.
+
+Projection Graduation Ledger concerns whether a claim may be promoted into stronger language, capability descriptions, or operational assumptions.
+
+The Admissibility Kernel concerns whether a proposed commitment remains admissible before execution.
+
+The Constitutional Runtime Substrate concerns commitment, receipts, lineage, replay, and bounded action.
+
+This repository focuses on the admissibility stage of that sequence. It does not implement the entire review path.
 
 This repo implements a public-safe, executable learning surface for steps 3–7. The website and bench explain, simulate, and teach the full journey.
 
