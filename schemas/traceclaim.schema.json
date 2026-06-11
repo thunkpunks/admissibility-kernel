@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neverthought.dev/schemas/traceclaim.schema.json",
+  "title": "TraceClaim",
+  "description": "Minimal evidence-to-claim provenance object. It binds evidence to a bounded claim without deciding admissibility or issuing authority.",
+  "type": "object",
+  "required": [
+    "traceclaim_id",
+    "source_evidence",
+    "claim_text",
+    "claim_status",
+    "supports",
+    "does_not_support",
+    "omissions",
+    "caveats",
+    "verification_status",
+    "downstream_use"
+  ],
+  "properties": {
+    "traceclaim_id": { "type": "string" },
+    "source_evidence": { "type": "array", "items": { "type": "string" } },
+    "claim_text": { "type": "string" },
+    "claim_status": { "type": "string", "enum": ["draft", "bounded_claim", "contested", "withdrawn"] },
+    "supports": { "type": "array", "items": { "type": "string" } },
+    "does_not_support": { "type": "array", "items": { "type": "string" } },
+    "omissions": { "type": "array", "items": { "type": "string" } },
+    "caveats": { "type": "array", "items": { "type": "string" } },
+    "verification_status": {
+      "type": "string",
+      "enum": ["evidence_referenced", "partially_verified", "unverified", "requires_review"]
+    },
+    "downstream_use": { "type": "string" }
+  },
+  "additionalProperties": false
+}
